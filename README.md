@@ -4,13 +4,13 @@
 
 Step 1.  create a new rails app with postgresql
 	       command:   
-                   **$ rails new capistrano-aws -d postgresql **
+                   ** $ rails new capistrano-aws -d postgresql **
 	 
 Step 2.  create amazon instance(refer to amazon notes) and in security group keep "http" and "https" source "Anywhere"
 
 Step 3.  Now in your localmachine create ssh key
 	       command: 
-                    **$ ssh-keygen -t rsa **
+                    ** $ ssh-keygen -t rsa **
 	 
 Step 4.  After the key is created just run 
 	 command: cat ~/.ssh/id_rsa.pub
