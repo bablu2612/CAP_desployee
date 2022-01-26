@@ -2,11 +2,11 @@
 server '3.17.189.87', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:satynautiyal/capistrano-aws.git'
-set :application,     'capistrano_aws'
+set :application,     'capistrano-aws'
 
-set :rbenv_ruby,      '3.0.3'
-# set :rbenv_ruby_dir,  '/home/ubuntu/.rbenv/versions/3.0.2'
-set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+set :rvm_ruby,      '3.0.3'
+# set :rvm_ruby_dir,  '/home/ubuntu/.rvm/versions/3.0.2'
+set :default_env, { path: "~/.rvm/shims:~/.rvm/bin:$PATH" }
 
 # If using Digital Ocean's Ruby on Rails Marketplace framework, your username is 'rails'
 set :user,            'ubuntu'
@@ -29,7 +29,7 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
-append :rbenv_map_bins, 'puma', 'pumactl'
+append :rvm_map_bins, 'puma', 'pumactl'
 
 ## Defaults:
 # set :scm,           :git
