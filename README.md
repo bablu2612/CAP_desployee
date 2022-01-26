@@ -110,13 +110,13 @@ command:
 **Step 14.** In your Gemfile  
 
 1. Add the following gems in group development  
-	**gem 'capistrano', require:  false  
-	gem 'capistrano-rvm', require:  false  
-	gem 'capistrano-rails', require:  false  
-	gem 'capistrano-bundler', require:  false  
-	gem 'capistrano3-puma', require:  false  **  
-* Open terminal in capistrano-aws app and run the following command  		
-       **$ bundle install**  
+**gem 'capistrano', require:  false    
+gem 'capistrano-rvm', require:  false  
+gem 'capistrano-rails', require:  false  
+gem 'capistrano-bundler', require:  false  
+gem 'capistrano3-puma', require:  false**  
+* Open terminal in capistrano-aws app and run the following command      		
+**$ bundle install  
 **$ cap install**   
 
 **Step 15.** Copy the content of the Capfile of this repo and paste it to the Capfile of your rails app  
@@ -128,7 +128,7 @@ command:
 	     3. application 'with your app name'   
 	     
 **Step 17.** Create file 'nginx.conf' in config folder(in your rails app) and paste the nginx.conf(of this repo) content to it.  
-	  ** Replace(Press Ctrl+h) **capistrano-aws** with your app name by in nginx.conf   
+	  ** Replace(Press Ctrl+h) **capistrano-aws** with your app name in nginx.conf   
 
 **Step 18.** Config and push code to github   
  		command:-   
@@ -156,17 +156,17 @@ press ctrl+x and save this file
 	  	 $ sudo rm /etc/nginx/sites-enabled/default**  
 
 **Step 22.** Deploy app  
- command:   
- ## In local  
-	 **$ cap production deploy:initial --trace**  
-  ### If 'uninitialized constant Capstrano::Puma' error occurs just install the capistrano3-puma gem globally by running the following command:  
-	**$ gem install capistrano3-puma**  
+command:   
+## In local  
+ **$ cap production deploy:initial --trace**  
+### If 'uninitialized constant Capstrano::Puma' error occurs just install the capistrano3-puma gem globally by running the following command:  
+**$ gem install capistrano3-puma**  
 	
 **Step 23.** Nginx configuration  
-	  commands:   
-	  ## In aws_ec2_instance terminal    
-	  	**$ sudo ln -nfs "/home/ubuntu/apps/capistrano-aws/current/config/nginx.conf" "/etc/nginx/sites-enabled/capistrano"  
-	  	$ sudo service nginx restart**  
+  commands:   
+  ## In aws_ec2_instance terminal    
+	**$ sudo ln -nfs "/home/ubuntu/apps/capistrano-aws/current/config/nginx.conf" "/etc/nginx/sites-enabled/capistrano"  
+	$ sudo service nginx restart**  
 	  	
 # Congratulations you have successfully deployed your rails app  
 
