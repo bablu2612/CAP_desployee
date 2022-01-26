@@ -1,14 +1,16 @@
-############################## Deploy Rails app with capistrano in aws ################################################################ 
+# Deploy Rails app with capistrano in aws 
 
-*****# Here 'capistrano-aws' is the app name you can replace this with your app name
+### Here 'capistrano-aws' is the app name you can replace this with your app name
 
 Step 1.  create a new rails app with postgresql
-	 command:   rails new capistrano-aws -d postgresql
+	       command:   
+                   **$ rails new capistrano-aws -d postgresql **
 	 
 Step 2.  create amazon instance(refer to amazon notes) and in security group keep "http" and "https" source "Anywhere"
 
 Step 3.  Now in your localmachine create ssh key
-	 command: ssh-keygen -t rsa
+	       command: 
+                    **$ ssh-keygen -t rsa **
 	 
 Step 4.  After the key is created just run 
 	 command: cat ~/.ssh/id_rsa.pub
@@ -326,10 +328,11 @@ Step 20. Deploy app
 	 command: 
 	 **In local
 	         $ cap production deploy:initial --trace
-	  **If 'uninitialized constant Capstrano::Puma' error occurs just install the capistrano3-puma gem globally by running the following command:
+	  **If 'uninitialized constant Capstrano::Puma' error occurs just install the capistrano3-puma gem globally by running the 	    following command:
 	  	$ gem install capistrano3-puma
 Step 20. Nginx configuration
 	  commands: 
+	  **In aws_ec2_instance terminal
 	  	$ sudo ln -nfs "/home/ubuntu/apps/capistrano-aws/current/config/nginx.conf" "/etc/nginx/sites-enabled/capistrano"
 	  	$ sudo service nginx restart
 	  	
