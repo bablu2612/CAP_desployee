@@ -150,10 +150,10 @@ command:-
 press ctrl+x and save this file  
 
 **Step 21.** Install nginx in aws_ec2_instance   
-	  command:   
-	  ## In aws_ec2 Instance terminal  
-	  	 **$ sudo apt install nginx  
-	  	 $ sudo rm /etc/nginx/sites-enabled/default**  
+  command:   
+  ## In aws_ec2 Instance terminal  
+	 **$ sudo apt install nginx  
+	 $ sudo rm /etc/nginx/sites-enabled/default**  
 
 **Step 22.** Deploy app  
 command:   
