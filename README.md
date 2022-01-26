@@ -165,8 +165,8 @@ command:
 **Step 23.** Nginx configuration  
   commands:   
   ## In aws_ec2_instance terminal    
-	**$ sudo ln -nfs "/home/ubuntu/apps/capistrano-aws/current/config/nginx.conf" "/etc/nginx/sites-enabled/capistrano"  
-	$ sudo service nginx restart**  
+ **$ sudo ln -nfs "/home/ubuntu/apps/capistrano-aws/current/config/nginx.conf" "/etc/nginx/sites-enabled/capistrano"  
+ $ sudo service nginx restart**
 	  	
 # Congratulations you have successfully deployed your rails app  
 
